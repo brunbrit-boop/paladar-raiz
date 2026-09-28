@@ -482,15 +482,35 @@ function setupEventListeners() {
   chefLoginForm.addEventListener('submit', handleChefLogin);
 
   // Menu Mobile
+  const navBackdrop = document.getElementById('navBackdrop');
+  
+  function openMobileNav() {
+    navLinks.classList.add('open');
+    if (navBackdrop) navBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    navLinks.classList.remove('open');
+    if (navBackdrop) navBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    if (navLinks.classList.contains('open')) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
   });
 
-  // Fechar menu mobile ao clicar em um link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-    });
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMobileNav);
+  }
+
+  // Fechar menu mobile ao clicar em um link ou botão
+  document.querySelectorAll('.nav-links a, .nav-links button').forEach(item => {
+    item.addEventListener('click', closeMobileNav);
   });
 }
 
