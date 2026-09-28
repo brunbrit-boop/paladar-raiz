@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paladar Raiz | Culinária Caipira & Marmitas Congeladas Artesanais</title>
+  <meta name="description" content="O sabor autêntico da culinária caipira e o afeto da Chef Dona Maria em kits de marmitas congeladas ultrassaborosas e práticas para o seu dia a dia.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Estilos Principais -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Notificação Superior -->
+  <div class="top-announcement">
+    <div class="container announcement-content">
+      <span><i class="fa-solid fa-leaf"></i> <strong>Lote Semanal Aberto:</strong> Faça seu pedido até quinta-feira para entregas de sexta e sábado!</span>
+      <span class="delivery-badge"><i class="fa-solid fa-snowflake"></i> Ultracongelamento Artesanal</span>
+    </div>
+  </div>
+
+  <!-- Header / Navbar Principal -->
+  <header class="main-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-identity">
+        <img src="assets/logo.jpg" alt="Logo Paladar Raiz" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Paladar Raiz</span>
+          <span class="brand-tagline">Cozinha Caipira & Afeto</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navegação -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item active">Início</a>
+        <a href="#chef" class="nav-item">A Chef</a>
+        <a href="#cardapio" class="nav-item">Cardápio & Kits</a>
+        <a href="#como-funciona" class="nav-item">Como Funciona</a>
+        <a href="#depoimentos" class="nav-item">Avaliações</a>
+        <button class="nav-item chef-access-btn" id="openChefLoginBtn" title="Área exclusiva da Chef">
+          <i class="fa-solid fa-lock"></i> Bastidores da Chef
+        </button>
+      </nav>
+
+      <!-- Botões de Ação do Header -->
+      <div class="nav-actions">
+        <button class="cart-trigger-btn" id="cartToggleBtn" aria-label="Abrir carrinho de compras">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-count-badge" id="cartCount">0</span>
+          <span class="cart-total-text" id="cartHeaderTotal">R$ 0,00</span>
+        </button>
+
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Abrir menu mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill-badge">
+            <span class="pulse-dot"></span>
+            <span>Do Fogão Caipira para o Seu Freezer</span>
+          </div>
+          <h1 class="hero-title">
+            O sabor da roça e o afeto da culinária caipira no seu dia a dia.
+          </h1>
+          <p class="hero-description">
+            Pratos feitos à mão pela <strong>Chef Maria Rosa</strong> com ingredientes frescos da terra, caldos apurados por horas e tecnologia de ultracongelamento que preserva o frescor, aroma e nutrição como se saíssem da panela agora.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#cardapio" class="btn btn-primary">
+              <i class="fa-solid fa-utensils"></i> Escolher Meus Kits
+            </a>
+            <a href="#chef" class="btn btn-secondary">
+              <i class="fa-solid fa-heart"></i> Conhecer a Chef
+            </a>
+          </div>
+          
+          <div class="hero-features-list">
+            <div class="feature-item">
+              <i class="fa-solid fa-seedling"></i>
+              <span>100% Sem Conservantes</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-temperature-arrow-down"></i>
+              <span>Ultracongelado a -35°C</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-stopwatch"></i>
+              <span>Pronto em 5 a 7 Minutos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/kits_hero.jpg" alt="Kits de marmitas congeladas artesanais Paladar Raiz" class="hero-main-img">
+            <div class="floating-badge badge-top-right">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <strong>Kit Mais Pedido</strong>
+                <span>Combo Sabores da Fazenda</span>
+              </div>
+            </div>
+            <div class="floating-badge badge-bottom-left">
+              <i class="fa-solid fa-truck-fast"></i>
+              <div>
+                <strong>Entregas Semanais</strong>
+                <span>Embalagem Térmica Especial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DA CHEF -->
+    <section class="chef-section" id="chef">
+      <div class="container">
+        <div class="chef-grid">
+          <div class="chef-visual-column">
+            <div class="chef-image-card">
+              <img src="assets/chef.jpg" alt="Chef Maria Rosa - Paladar Raiz" class="chef-photo">
+              <div class="chef-experience-tag">
+                <span class="exp-number">+20</span>
+                <span class="exp-text">Anos de amor à culinária de fazenda</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chef-info-column">
+            <div class="section-tag"><i class="fa-solid fa-kitchen-set"></i> A Alma do Paladar Raiz</div>
+            <h2 class="section-title">"Cozinhar com raiz é respeitar o tempo das panelas e o carinho da mesa farta."</h2>
+            
+            <p class="chef-quote-lead">
+              Conheça a <strong>Chef Maria Rosa</strong>, mineira de nascença e apaixonada pelos segredos passados de geração em geração.
+            </p>
+            
+            <p class="chef-story-text">
+              Criada entre tachos de cobre, fogão a lenha e hortas aromáticas, ela uniu a autêntica tradição caipira à gastronomia contemporânea de ultracongelamento. Cada receita carrega temperos naturais pilados no pilão de pedra, carnes cozidas lentamente e o verdadeiro tempero caipira — sem pós industrializados, corantes ou aditivos químicos.
+            </p>
+
+            <div class="chef-pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-carrot"></i></div>
+                <div>
+                  <h4>Origem Agroecológica</h4>
+                  <p>Mandioca fresca, milho da roça e ervas colhidas de pequenos produtores.</p>
+                </div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <div>
+                  <h4>Cozimento Lento & Artesanal</h4>
+                  <p>Caldos naturais fervidos por 12 horas e carnes desmanchando de macias.</p>
+                </div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-snowflake"></i></div>
+                <div>
+                  <h4>Ultracongelamento Puro</h4>
+                  <p>Garante textura suculenta e zero água acumulada no descongelamento.</p>
+                </div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div>
+                  <h4>Nutrição de Verdade</h4>
+                  <p>Comida de verdade que abraça o corpo e traz energia limpa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chef-signature-box">
+              <div class="signature-font">Chef Maria Rosa</div>
+              <span class="signature-role">Fundadora e Chef Executiva • Paladar Raiz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER DE CONCEITO / PRATO ASSINATURA -->
+    <section class="signature-dish-banner">
+      <div class="container banner-inner">
+        <div class="banner-content">
+          <span class="banner-subtitle"><i class="fa-solid fa-crown"></i> Prato Assinatura da Casa</span>
+          <h3 class="banner-title">Feijão Tropeiro Nobre com Bisteca Suína & Couve Manteiga</h3>
+          <p class="banner-desc">
+            Nosso clássico mais aclamado: feijão cozido al dente com farinha de mandioca tostada na banha de fazenda, ovos caipiras, torresmo pururuca sequinho, bisteca suína grelhada e couve fatiada fininha.
+          </p>
+          <div class="banner-actions">
+            <button class="btn btn-primary add-single-btn" data-id="1">
+              <i class="fa-solid fa-cart-plus"></i> Experimentar este Prato (R$ 28,90)
+            </button>
+          </div>
+        </div>
+        <div class="banner-img-box">
+          <img src="assets/prato_tropeiro.jpg" alt="Feijão Tropeiro Artesanal Paladar Raiz" class="dish-highlight-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- VITRINE DE MARMITAS & KITS (CARDÁPIO) -->
+    <section class="menu-section" id="cardapio">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag"><i class="fa-solid fa-box-open"></i> Cardápio da Semana</div>
+          <h2 class="section-title">Kits de Marmitas & Pratos Avulsos</h2>
+          <p class="section-subtitle">
+            Escolha pratos individuais para montar o seu pacote ou leve nossos combos semanais com descontos especiais.
+          </p>
+
+          <!-- Filtros de Categorias -->
+          <div class="category-filters" id="categoryFilters">
+            <button class="filter-btn active" data-category="todos">Todos os Pratos</button>
+            <button class="filter-btn" data-category="kits"><i class="fa-solid fa-boxes-stacked"></i> Kits Semanais</button>
+            <button class="filter-btn" data-category="classicos"><i class="fa-solid fa-bowl-rice"></i> Clássicos Caipiras</button>
+            <button class="filter-btn" data-category="leves"><i class="fa-solid fa-leaf"></i> Linha Equilíbrio</button>
+            <button class="filter-btn" data-category="sobremesas"><i class="fa-solid fa-cookie"></i> Doces da Roça</button>
+          </div>
+        </div>
+
+        <!-- Grade de Produtos -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Renderizado via JavaScript dinâmico -->
+        </div>
+
+        <!-- Alerta de Customização de Kit -->
+        <div class="custom-kit-callout">
+          <div class="callout-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="callout-info">
+            <h4>Quer personalizar seu próprio pacote semanal ou mensal?</h4>
+            <p>Fale diretamente com nossa equipe para escolher combinações específicas para dietas, restrições ou famílias inteiras.</p>
+          </div>
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20montar%20um%20kit%20personalizado%20no%20Paladar%20Raiz." target="_blank" class="btn btn-outline-light">
+            Montar Kit sob Medida
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA O CONGELAMENTO & ENTREGA -->
+    <section class="how-it-works-section" id="como-funciona">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag"><i class="fa-solid fa-gear"></i> Praticidade Imbatível</div>
+          <h2 class="section-title">Como Funciona a Sua Experiência</h2>
+          <p class="section-subtitle">Do clique no cardápio à sua mesa aquecida e perfumada em minutos.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+            <h3>Escolha Seus Pratos</h3>
+            <p>Selecione seus pratos caipiras favoritos ou os kits prontos e finalize com um clique direto pelo WhatsApp.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon"><i class="fa-solid fa-wind"></i></div>
+            <h3>Preparo & Ultracongelamento</h3>
+            <p>A Chef Maria prepara com amor e ultracongela a -35°C imediatamente para reter todos os sucos e nutrientes.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <h3>Entrega em Caixa Térmica</h3>
+            <p>Receba no dia agendado na sua casa ou escritório, 100% congelado e pronto para guardar no seu freezer.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-icon"><i class="fa-solid fa-microwave"></i></div>
+            <h3>5 Minutos no Micro-ondas</h3>
+            <p>Basta levar ao micro-ondas ou banho-maria. O aroma de fazenda vai invadir a sua casa instantaneamente!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS DE CLIENTES -->
+    <section class="testimonials-section" id="depoimentos">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag"><i class="fa-solid fa-star"></i> Opinião de Quem Provou</div>
+          <h2 class="section-title">O que Dizem Nossos Clientes</h2>
+          <p class="section-subtitle">Mais de 1.200 marmitas entregues com média 4.9 de aprovação.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote-text">
+              "Eu nunca imaginei que uma marmita congelada pudesse ter gosto de comida de domingo na fazenda. O feijão tropeiro e a galinhada têm tempero de verdade, nada de água no prato!"
+            </p>
+            <div class="customer-profile">
+              <div class="customer-avatar">LC</div>
+              <div>
+                <strong>Larissa Camargo</strong>
+                <span>Cliente do Kit Semanal</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote-text">
+              "A rotina de trabalho em home office me deixava sem tempo. O Paladar Raiz salvou meus almoços! O escondidinho de queijo canastra é um espetáculo. Dá para sentir o carinho da Chef."
+            </p>
+            <div class="customer-profile">
+              <div class="customer-avatar">RF</div>
+              <div>
+                <strong>Rodrigo Furtado</strong>
+                <span>Arquiteto • São Paulo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote-text">
+              "Comprei o Kit Família de 10 marmitas e todos em casa se apaixonaram. Minha mãe, que é super exigente com comida caipira, elogiou demais o tempero e a maciez da carne seca."
+            </p>
+            <div class="customer-profile">
+              <div class="customer-avatar">CS</div>
+              <div>
+                <strong>Carla Silveira</strong>
+                <span>Nutricionista & Mãe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / DÚVIDAS FREQUENTES -->
+    <section class="faq-section">
+      <div class="container faq-container">
+        <div class="section-header-center">
+          <div class="section-tag"><i class="fa-solid fa-circle-question"></i> Tira-Dúvidas</div>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Como as marmitas devem ser descongeladas e aquecidas?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Nossas embalagens são 100% livres de BPA e adequadas para micro-ondas. Basta levantar uma pontinha da tampa e aquecer por 5 a 7 minutos em potência média/alta. Também é possível aquecer em banho-maria se preferir.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Quanto tempo as marmitas duram no congelador?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Graças ao processo de ultracongelamento artesanal rápido, elas duram até 90 dias no freezer a -18°C sem nenhuma perda de sabor, aroma ou nutrientes.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Quais são os dias de entrega?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-body">
+              <p>Entregamos semanalmente às terças, sextas e sábados, em horário previamente alinhado no seu WhatsApp. As refeições viajam em caixas térmicas com gelo em gel garantindo que cheguem petrificadas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ PRINCIPAL -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="assets/logo.jpg" alt="Logo Paladar Raiz" class="footer-logo">
+          <div>
+            <h3>Paladar Raiz</h3>
+            <p>Comida Caipira & Marmitas Artesanais</p>
+          </div>
+        </div>
+        <p class="footer-text">
+          Levando a riqueza do campo, o resgate das tradições e a comida afetiva da roça para quem não abre mão de comer bem todos os dias.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#chef">A Chef Maria Rosa</a></li>
+          <li><a href="#cardapio">Cardápio & Kits</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#depoimentos">Avaliações</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Atendimento & Entregas</h4>
+        <ul>
+          <li><i class="fa-regular fa-clock"></i> Seg a Sex: 08h às 19h</li>
+          <li><i class="fa-solid fa-truck"></i> Entregas em toda a Região</li>
+          <li><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</li>
+          <li><i class="fa-regular fa-envelope"></i> contato@paladarraiz.com.br</li>
+        </ul>
+      </div>
+
+      <div class="footer-admin-col">
+        <h4>Acesso Restrito</h4>
+        <p>Interface exclusiva da Chef para atualizar preços, fotos dos pratos e promoções.</p>
+        <button class="btn btn-outline-gold" id="footerChefLoginBtn">
+          <i class="fa-solid fa-key"></i> Painel da Chef
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Paladar Raiz Culinária Caipira. Todos os direitos reservados.</p>
+        <p class="love-note">Feito com <i class="fa-solid fa-heart"></i> e tempero de fazenda.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GAVETA LATERAL DO CARRINHO DE COMPRAS (OFFCANVAS) -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <h3>Seu Pedido Raiz</h3>
+      </div>
+      <button class="close-cart-btn" id="closeCartBtn" aria-label="Fechar carrinho">&times;</button>
+    </div>
+
+    <div class="cart-drawer-body" id="cartItemsContainer">
+      <!-- Itens do carrinho renderizados dinamicamente -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="cart-summary-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotalText">R$ 0,00</span>
+      </div>
+      <div class="cart-summary-row discount-row" id="cartDiscountRow" style="display: none;">
+        <span>Desconto Combo:</span>
+        <span id="cartDiscountText">- R$ 0,00</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <strong id="cartFinalTotalText">R$ 0,00</strong>
+      </div>
+
+      <!-- Campos de identificação para o WhatsApp -->
+      <div class="checkout-inputs">
+        <input type="text" id="customerName" placeholder="Seu Nome completo" class="input-field" required>
+        <input type="text" id="customerAddress" placeholder="Bairro / Endereço para entrega" class="input-field" required>
+        <select id="deliveryDay" class="input-field">
+          <option value="Sexta-feira">Entrega na Sexta-feira</option>
+          <option value="Sábado">Entrega no Sábado</option>
+          <option value="Terça-feira">Entrega na Terça-feira</option>
+        </select>
+      </div>
+
+      <button class="btn btn-whatsapp-checkout" id="checkoutWhatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido pelo WhatsApp
+      </button>
+      <p class="cart-note"><i class="fa-solid fa-shield-halved"></i> Conversa direta com nossa equipe para confirmação de entrega.</p>
+    </div>
+  </aside>
+
+  <!-- MODAL DE DETALHES DO PRATO -->
+  <div class="modal-backdrop" id="dishModalBackdrop">
+    <div class="dish-modal-content">
+      <button class="close-modal-btn" id="closeDishModalBtn">&times;</button>
+      <div class="modal-grid" id="dishModalBody">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE LOGIN DA CHEF (BASTIDORES) -->
+  <div class="modal-backdrop" id="chefLoginBackdrop">
+    <div class="chef-login-modal">
+      <button class="close-modal-btn" id="closeChefLoginBtn">&times;</button>
+      
+      <div class="login-header">
+        <img src="assets/logo.jpg" alt="Paladar Raiz" class="login-logo">
+        <h3>Bastidores do Paladar Raiz</h3>
+        <p>Acesso exclusivo da Chef para gerenciar fotos, pratos e promoções.</p>
+      </div>
+
+      <form id="chefLoginForm" class="login-form">
+        <div class="form-group">
+          <label for="chefEmail"><i class="fa-solid fa-envelope"></i> E-mail da Chef</label>
+          <input type="email" id="chefEmail" placeholder="chef@paladarraiz.com.br" value="chef@paladarraiz.com.br" required class="input-field">
+        </div>
+
+        <div class="form-group">
+          <label for="chefPassword"><i class="fa-solid fa-key"></i> Senha de Acesso</label>
+          <input type="password" id="chefPassword" placeholder="••••••••" value="raiz2026" required class="input-field">
+        </div>
+
+        <div class="login-alert-tip">
+          <i class="fa-solid fa-lightbulb"></i> <span>Acesso demonstrativo liberado para testes da Chef.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-right-to-bracket"></i> Entrar no Painel de Controle
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante de WhatsApp Rápido -->
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20as%20marmitas%20congeladas%20do%20Paladar%20Raiz." target="_blank" class="floating-whatsapp-btn" title="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Dúvidas? Fale Conosco</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
